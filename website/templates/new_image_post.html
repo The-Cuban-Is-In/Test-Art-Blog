@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <body class="body">
+        <div  class="container-admin-home" >
+            <div class="sec1">
+                <section class="new-post-wrap" >
+                    <form align="center" method="POST"  enctype="multipart/form-data">
+                        <div>
+                            {{ form.title.label() }}
+                            <br>
+                            {{ form.title(class="post-title-box") }}
+                        </div>
+                        <div>
+                            {{ form.content.label() }}
+                            {{ form.content(class="post-content-box2") }}
+                        </div>
+                        <div >
+                            {{ form.photo.label }}
+                            {{ form.photo() }}
+                        </div>
+                        <br>
+                        <div>
+                            {{ form.post()}}
+                            <a class="btn-mod" href="{{ url_for('auth.admin') }}">Cancel</a>
+                        </div>
+                    </form>
+                </section>
+            
+            </div>
+            <!-- right-nav -->
+            <div class="sec2">
+                <article>
+                    <ul align="center">
+                        <li><a href="{{ url_for('auth.newPost') }}">Set New Text Post</a></li>
+                        <hr>
+                        <li><a href="{{ url_for('auth.photoPost') }}">New Image Post</a></li>
+                        <hr>
+                        <li><a href="#">Post History</a></li>
+                        <hr>
+                        <li><a href="#">Admin - Site Data</a></li>
+                        <hr>
+                        <li><a href="#">Admin - Ticketing System</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                        <hr>
+                        <li><a href="#">Admin - ###</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </body>      
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for blog in posts.items %}
+        <body class="home-body">
+            <section class="blog-body">
+                <h1 align="center">{{ blog.title }}</h1>
+                <small align="center">{{ blog.date_posted.strftime('%m-%d-%y') }}</small>
+                <p>{{ blog.content }}</p>
+            </section>
+            <div align="center" class="button-wrapper">
+                {% endfor %}
+                {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                    {% if page_num %}
+                        {% if posts.page == page_num %}
+                            <a class="btn-mod2" href="{{ url_for('views.blog', page=page_num) }}">{{ page_num }}</a>
+                        {% else %}
+                            <a class="btn-mod2" href="{{ url_for('views.blog', page=page_num) }}">{{ page_num }}</a>
+                        {% endif %}
+                    {% else %}  
+                    {% endif%}
+                {% endfor %}
+            </div>
+        </body>
+    
+{% endblock %}

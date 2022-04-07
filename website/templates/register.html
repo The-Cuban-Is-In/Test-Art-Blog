@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <body class="body">
+        <section class="container-reg ">
+            <h1 class="header" align="center">Sign Up!</h1>
+            <form class="entry" method="POST">
+                <div>
+                    {{ form.firstName.label(class="reg-labels") }}
+                </div>
+                <div class="entry-label">
+                    {{ form.firstName(style="width:100%;") }}
+                </div>
+                <div>
+                    {{ form.lastName.label(class="reg-labels") }}
+                </div>
+                <div class="entry-label">
+                    {{ form.lastName(style="width:100%;") }}
+                </div>
+                <div>
+                    {{ form.email.label(class="reg-labels") }}
+                </div>
+                <div class="entry-label">
+                    {{ form.email(style="width:100%;") }}
+                </div>
+                <div>
+                    {{ form.password.label(class="reg-labels") }}
+                </div>
+                <div class="entry-label">
+                    {{ form.password(style="width:100%;") }}
+                </div>
+                <div>
+                    {{ form.confirm.label(class="reg-labels") }}
+                </div>
+                <div class="entry-label">
+                    {{ form.confirm(style="width:100%;") }}
+                </div>
+                <div class="entry-label" align="center">{{ form.submit(style="width:101%; margin-top:10px;") }}</div>
+            </form>
+        </section>
+    </body>
+
+{% endblock %}

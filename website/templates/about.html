@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body class="body">
+        <section class="contact-wrap">
+            <div align="center" class="about-sec1">
+                <h1>Armando G. Garcia</h1>
+                <p>There isn't to much to say. Im an intermediate python developer,<br>
+                   aspiring to grow. Taking on new challenges and projects as they <br>
+                   come my way. As I head into this new jorney I hope to futher pr-<br>
+                   ogress in my abilities to develope both my art and my developme-<br>
+                   -nt skills. This page is a means to display both my current and<br>
+                   progressive development in both practices. In hopes of making<br>
+                   one or both of the thing I love into a career.</p>
+            </div>
+            <div class="about-sec2">
+                <img src="{{ url_for('static', filename='site_images/default.jpg') }}">
+            </div>
+        </section>
+        <section class="body-wrap"> 
+
+            <div class="about-sec3">
+                <h1>fill this section with projects </h1>
+                <h1>fill this section with projects </h1>
+                <h1>fill this section with projects </h1>
+                <h1>fill this section with projects </h1>
+            </div>
+
+        </section>
+    </body>
+{% endblock %}
