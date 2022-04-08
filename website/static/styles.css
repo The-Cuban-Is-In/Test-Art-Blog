@@ -128,7 +128,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(1, auto-fit);
     grid-gap: 1em;
-    width: 75%;
+    max-width: 75%;
     margin-left: 25%;
     margin-bottom: 8%;
     margin: 7%;

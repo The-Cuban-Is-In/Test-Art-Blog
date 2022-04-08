@@ -9,7 +9,7 @@
                 <section class="stickynote-wrapper">
                     <div class="stickynote-post">
                             <h3>{{ post.title }}</h3>
-                            <img class="stickynote" src="{{ url_for('static', filename='posted_images/{}'.format(post.imageFile)) }}" width="500" ,height="600"><br>
+                            <img class="stickynote" src="{{ url_for('static', filename='posted_images/{}'.format(post.imageFile)) }}" width="100px" ,height="600px"><br>
                             <small>{{ post.date_posted.strftime('%m-%d-%y') }}</small>
                             <p>{{ post.content }}</p>  
                             {% if current_user.is_authenticated %}
